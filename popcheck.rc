@@ -1,0 +1,174 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "popcheck.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+1                       ICON    DISCARDABLE     "popcheck2.ico"
+
+IDW_MAIN                ICON    DISCARDABLE     "popcheck.ico"
+IDW_MAIN2               ICON    DISCARDABLE     "popcheck2.ico"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_IBML                BITMAP  MOVEABLE PURE   "libm.bmp"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDW_MAIN MENUEX PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "&File",                          IDM_FILE,MFT_STRING,MFS_ENABLED
+    BEGIN
+        MENUITEM "&Check now",                  IDM_CHECKNOW,MFT_STRING,MFS_ENABLED
+        MENUITEM "&Hide",                       IDM_HIDE,MFT_STRING,MFS_ENABLED
+        MENUITEM "E&xit",                       IDM_EXIT,MFT_STRING,MFS_ENABLED
+    END
+    POPUP "&Options",                       IDM_OPTIONS,MFT_STRING,MFS_ENABLED
+    BEGIN
+        MENUITEM "&Setup...",                   IDM_SETUP,MFT_STRING,MFS_ENABLED
+    END
+    POPUP "&Help",                          IDM_HELP,MFT_STRING,MFS_ENABLED
+    BEGIN
+        MENUITEM "&About...",               IDM_ABOUT,MFT_STRING,MFS_ENABLED
+    END
+END
+
+IDW_MAIN2 MENUEX PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "&File"                           
+    BEGIN
+        MENUITEM "&Check now",              IDM_CHECKNOW,MFT_STRING,MFS_ENABLED
+        MENUITEM "&Show",                   IDM_SHOW,MFT_STRING,MFS_ENABLED
+        MENUITEM "Start &mail...",          IDM_EMAIL,MFT_STRING,MFS_ENABLED
+        MENUITEM "&Options...",             IDM_SETUP,MFT_STRING,MFS_ENABLED
+        MENUITEM "&About...",               IDM_ABOUT,MFT_STRING,MFS_ENABLED
+        MENUITEM "E&xit",                   IDM_EXIT,MFT_STRING,MFS_ENABLED
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+DLG_ABOUT DIALOG DISCARDABLE  2, 2, 270, 162
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Product Information"
+BEGIN
+    LTEXT           "",ID_RECT,54,7,163,66
+    LTEXT           "TM",6107,237,65,20,8
+    ICON            IDW_MAIN2,IDW_MAIN2,122,73,20,16,WS_GROUP
+    CTEXT           "PopCheck Version 1.0.2",-1,2,93,266,8
+    CTEXT           "By Thomas E. Link",-1,2,105,266,8
+    CTEXT           "(C) Copyright IBM Corp. 2002  All rights reserved.",-1,
+                    2,115,266,8
+    CTEXT           "IBM is a registered trademark of",-1,2,125,266,8
+    CTEXT           "International Business Machines Corp.",-1,3,135,266,8
+    DEFPUSHBUTTON   "&OK",IDOK,116,144,40,14,WS_GROUP
+END
+
+DLG_SETUP DIALOG DISCARDABLE  14, 0, 320, 140
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Setup"
+BEGIN
+    RTEXT           "Wait between searches:",-1,20,6,124,8
+    EDITTEXT        ID_EDT_LWAIT,148,6,32,12
+    LTEXT           "Seconds",-1,185,6,47,8
+    RTEXT           "Listbox Entries:",-1,20,18,124,8
+    EDITTEXT        ID_EDT_UMAX,148,18,32,12
+    RTEXT           "Userid",-1,7,39,64,8
+    EDITTEXT        ID_EDT_USER,76,39,179,12, ES_AUTOHSCROLL
+    RTEXT           "Password",-1,7,51,64,8
+    EDITTEXT        ID_EDT_PASS,76,51,179,12, ES_AUTOHSCROLL | ES_PASSWORD
+    RTEXT           "Server",-1,7,63,64,8
+    EDITTEXT        ID_EDT_SERVER,76,63,179,12, ES_AUTOHSCROLL
+    RTEXT           "Socks Server",-1,3,75,67,8
+    EDITTEXT        ID_EDT_SOCKS,76,75,179,12, ES_AUTOHSCROLL
+    RTEXT           "Email Program",-1,3,87,67,8
+    EDITTEXT        ID_EDT_EMAIL,76,87,179,12, ES_AUTOHSCROLL
+    PUSHBUTTON      "&Browse",DID_BROWSEE,258,87,44,10
+    RTEXT           "Sound File",-1,3,99,67,8
+    EDITTEXT        ID_EDT_SOUND,76,99,179,12, ES_AUTOHSCROLL
+    PUSHBUTTON      "B&rowse",DID_BROWSES,258,99,44,10
+    CONTROL         "Show status window",ID_CHK_SHOWSTAT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,32,114,120,10
+    CONTROL         "Reset unread on launch",ID_CHK_LRESET,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,160,114,120,10
+    DEFPUSHBUTTON   "&OK",IDOK,6,124,40,14,WS_GROUP
+    PUSHBUTTON      "Cancel",IDCANCEL,49,124,44,14,NOT WS_TABSTOP
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "popcheck.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
